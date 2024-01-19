@@ -6,12 +6,15 @@
     <title>Hybrid Demo</title>
     <style>
       body {
+        margin: 0;
+      }
+      .container {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-        margin: 0;
         padding: 1rem;
       }
+    
       img {
         display: inline-block;
         border-radius: 1rem;
@@ -19,16 +22,24 @@
         max-width: 300px;
         min-width: 0;
       }
+      .ajaxblock {
+        padding:2rem;
+      }
     </style>
   </head>
   <body>
-    <img src="https://picsum.photos/id/20/1080" alt="Image 1" />
-    <img src="https://picsum.photos/id/28/1080" alt="Image 2" />
-    <img src="https://picsum.photos/id/57/1080" alt="Image 3" />
-    <img src="https://picsum.photos/id/59/1080" alt="Image 4" />
+    
+    <div class="ajaxblock">
+      <button onclick="makeAjaxCall()">Get Data</button>
+      <div id="result"></div>
+    </div>
+    <div class="container">
+      <img src="https://picsum.photos/id/20/1080" alt="Image 1" />
+      <img src="https://picsum.photos/id/28/1080" alt="Image 2" />
+      <img src="https://picsum.photos/id/57/1080" alt="Image 3" />
+      <img src="https://picsum.photos/id/59/1080" alt="Image 4" />
+    </div>
 
-    <button onclick="makeAjaxCall()">Get Data</button>
-    <div id="result"></div>
 
     <script type="text/javascript">
       function makeAjaxCall() {
@@ -51,8 +62,10 @@
         xhr.send();
       }
       var page_name = "Hybrid Demo";
-
     </script>
-    <script type="text/javascript" src="https://sdkdemo26621z.btttag.com/btt.js"></script>
+    <script
+      type="text/javascript"
+      src="https://sdkdemo26621z.btttag.com/btt.js"
+    ></script>
   </body>
 </html>
